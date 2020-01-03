@@ -1,0 +1,95 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <!-- lang is necessary for screen reader compatibility -->
+  <head>
+    <title>Helix -Documentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../public/assets/images/favicon.ico" />
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../public/assets/helix-ui.css"
+    />
+
+    <!-- DO NOT COMPILE: Appends polyfills to <head> if needed by user's browser. -->
+    <script src="../public/assets/webcomponents-loader.js"></script>
+  </head>
+
+  <body class="hxVertical" id="top">
+    <!-- Accessibility: This link should be the first item in tab order. -->
+    <a href="#content">Skip to main content</a>
+
+    <header id="head">
+      <div class="hxRow">
+        <div class="hxCol hxSpan-3 hxOffset-1">
+          <img
+            id="page-logo"
+            src="../public/assets/images/d-vault-logo.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+
+    <div id="app">
+      <div id="stage">
+        <nav id="nav" class="hxNav">
+          <!-- Product Navigation -->
+          <a href="#"><img
+                src="/public/assets/images/css_24.png"
+                alt="HTML-5 Icon"
+              />CSS</a>
+          <a href="#"><img
+                class="hxNav-icon"
+                src="/public/assets/images/html5_16.png"
+                alt="HTML-5 Icon"
+              />HTML</a>
+          <!-- end:Product Navigation -->
+        </nav>
+
+        <!-- Accessibility: [role="main"] must be present on main#content -->
+        <main role="main" id="content" class="hxBox hxMd"></main>
+
+        <aside class="hxSiderail hxBox hxMd">
+            <p id="html-elements" class="content">HTML Elements</p>
+            </hx-div>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <footer id="foot">
+      &copy; 2017-2019 Rackspace US, Inc.
+      <nav>
+        <a href="https://www.rackspace.com/information/legal/websiteterms"
+          >Website Terms</a
+        >
+        <a href="https://www.rackspace.com/information/legal/privacystatement"
+          >Privacy Policy</a
+        >
+      </nav>
+    </footer>
+
+    <!-- UMD for Legacy Browsers (ES5) -->
+    <script nomodule src="../public/assets/helix-ui.min.js"></script>
+    <script nomodule>
+      HelixUI.initialize();
+    </script>
+
+    <!-- ESM for Modern Browsers (ES6+) -->
+    <script type="module">
+      import HelixUI from '../public/assets/helix-ui.module.min.js';
+
+      HelixUI.initialize();
+    </script>
+
+    <!-- App Scripts Go Here -->
+      <script src="/public/assets/app.js"></script>
+      <script src="/public/assets/components/html-elements.js"></script>
+    <a id="bottom"></a>
+  </body>
+</html>
